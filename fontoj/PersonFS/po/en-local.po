@@ -122,7 +122,7 @@ msgstr "«FamilySearch» Duplicate ID: %s"
 
 #: PersonFS/Importo.py:841
 msgid "Duplikata FSFTID"
-msgstr "Duplicate fsftid"
+msgstr "Duplicate FSFTID"
 
 #: PersonFS/Importo.py:843
 msgid "_Daŭru averton"
@@ -142,49 +142,49 @@ msgstr "Build FSID list for locations (2/11)"
 
 #: PersonFS/Importo.py:905
 msgid "Elŝutante personojn… (3/11)"
-msgstr "Downloading people ... (3/11)"
+msgstr "Downloading people… (3/11)"
 
 #: PersonFS/Importo.py:906
 msgid "Elŝutante personon…"
-msgstr "Downloading a person ..."
+msgstr "Downloading person…"
 
 #: PersonFS/Importo.py:910
 msgid "Elŝutante ascendantojn… (4/11)"
-msgstr "Downloading ascendants… (4/11)"
+msgstr "Downloading ancestors… (4/11)"
 
 #: PersonFS/Importo.py:919
 #, python-format
 msgid "Elŝutante %d generaciojn de ascendantojn…"
-msgstr "Downloading %d generations of ascendants ..."
+msgstr "Downloading %d generations of ancestors…"
 
 #: PersonFS/Importo.py:922
 msgid "Elŝutante posteulojn… (5/11)"
-msgstr "Downloading descendants ... (5/11)"
+msgstr "Downloading descendants… (5/11)"
 
 #: PersonFS/Importo.py:930
 #, python-format
 msgid "Elŝutante %d generaciojn de posteulojn…"
-msgstr "Downloading %d generations of descendants ..."
+msgstr "Downloading %d generations of descendants…"
 
 #: PersonFS/Importo.py:937
 msgid "Elŝutante edzojn… (6/11)"
-msgstr "Downloading husbands ... (6/11)"
+msgstr "Downloading husbands… (6/11)"
 
 #: PersonFS/Importo.py:938
 msgid "Elŝutante edzojn…"
-msgstr "Downloading husbands ..."
+msgstr "Downloading husbands…"
 
 #: PersonFS/Importo.py:943
 msgid "Elŝutante notojn… (7/11)"
-msgstr "Downloading Notes… (7/11)"
+msgstr "Downloading notes… (7/11)"
 
 #: PersonFS/Importo.py:944
 msgid "Elŝutante notojn kaj fontojn…"
-msgstr "Elŝutante notojn kaj fontojn…"
+msgstr "Downloading notes and sources…"
 
 #: PersonFS/Importo.py:967
 msgid "Importado…"
-msgstr "Import ..."
+msgstr "Import…"
 
 #: PersonFS/Importo.py:978
 msgid "Importado de lokoj… (8/11)"
@@ -192,11 +192,11 @@ msgstr "Importing places… (8/11)"
 
 #: PersonFS/Importo.py:979
 msgid "Importado de lokoj…"
-msgstr "Importing places ..."
+msgstr "Importing places…"
 
 #: PersonFS/Importo.py:983
 msgid "Importado de personoj… (9/11)"
-msgstr "Importing persons ... (9/11)"
+msgstr "Importing people… (9/11)"
 
 #: PersonFS/Importo.py:984
 msgid "Importado de personoj…"
@@ -204,19 +204,19 @@ msgstr "Importing people ..."
 
 #: PersonFS/Importo.py:989
 msgid "Importado de familioj… (10/11)"
-msgstr "Importing families ... (10/11)"
+msgstr "Importing families… (10/11)"
 
 #: PersonFS/Importo.py:990
 msgid "Importado de familioj…"
-msgstr "Importing families ..."
+msgstr "Importing families…"
 
 #: PersonFS/Importo.py:996
 msgid "Importado de infanoj… (11/11)"
-msgstr "Importing children ... (11/11)"
+msgstr "Importing children… (11/11)"
 
 #: PersonFS/Importo.py:997
 msgid "Importado de infanoj…"
-msgstr "Importing children ..."
+msgstr "Importing children…"
 
 #: PersonFS/Importo.py:1044 PersonFS/Importo.py:1102
 msgid "sengepatra familio ???"
@@ -228,7 +228,7 @@ msgstr "Plugins"
 
 #: PersonFS/Importo.py:1168 PersonFS/Importo.py:1223
 msgid "FamilySearch Importo Opcionoj"
-msgstr "FamilySearch Import Optiones"
+msgstr "FamilySearch Import Options"
 
 #: PersonFS/Importo.py:1169
 msgid "FamilySearch ID"
@@ -236,7 +236,7 @@ msgstr "FamilySearch ID"
 
 #: PersonFS/Importo.py:1170
 msgid "identiga numero por esti prenita de FamilySearch retejo"
-msgstr "Identification number to be taken from FamilySearch website"
+msgstr "identification number retrieved from FamilySearch"
 
 #: PersonFS/Importo.py:1172
 msgid "Nombro ascentontaj"
@@ -296,7 +296,7 @@ msgstr "FamilySearch Import Tool"
 
 #: PersonFS/PersonFS.gpr.py:30
 msgid "PersonFS"
-msgstr "Personfs"
+msgstr "PersonFS"
 
 #: PersonFS/PersonFS.gpr.py:31
 msgid "interfaco por FamilySearch"
@@ -304,7 +304,7 @@ msgstr "Interface for FamilySearch"
 
 #: PersonFS/PersonFS.gpr.py:37
 msgid "FS"
-msgstr "Fs"
+msgstr "FS"
 
 #: PersonFS/PersonFS.gpr.py:48
 msgid "Importo de FamilySearch datumoj"
@@ -316,11 +316,11 @@ msgstr "FamilySearch."
 
 #: PersonFS/PersonFS.gpr.py:63
 msgid "FamilySearch : kompari"
-msgstr "FamilySearch: Compare"
+msgstr "FamilySearch: compare"
 
 #: PersonFS/PersonFS.gpr.py:64
 msgid "FamilySearch : kompari gramps personojn kun FS personojn."
-msgstr "FamilySearch: Compare Gramps people with FS people."
+msgstr "FamilySearch: compare Gramps people with FS people."
 
 #: PersonFS/PersonFS.py:88
 msgid "PersonFS : minibrowser ne havebla."
@@ -348,7 +348,7 @@ msgstr ""
 
 #: PersonFS/PersonFS.py:830
 msgid "kopii al gramps"
-msgstr "copy to gramps"
+msgstr "Copy to Gramps"
 
 #: PersonFS/PersonFS.py:966
 #, python-format
@@ -390,11 +390,11 @@ msgstr "Gramps value"
 
 #: PersonFS/PersonFS.py:1079 PersonFS/PersonFS.py:1109
 msgid "FS Dato"
-msgstr "Fs date"
+msgstr "FS date"
 
 #: PersonFS/PersonFS.py:1080 PersonFS/PersonFS.py:1095
 msgid "FS Valoro"
-msgstr "Fs value"
+msgstr "FS value"
 
 #: PersonFS/PersonFS.py:1083 PersonFS/PersonFS.py:1098
 #: PersonFS/PersonFS.py:1113
@@ -455,7 +455,7 @@ msgstr "Name, first name"
 
 #: PersonFS/PersonFS.py:1348 PersonFS/PersonFS.py:1392
 msgid "Birth"
-msgstr "BIRTH"
+msgstr "Birth"
 
 #: PersonFS/PersonFS.py:1349 PersonFS/PersonFS.py:1393
 msgid "Death"
@@ -467,7 +467,7 @@ msgstr "Parents"
 
 #: PersonFS/PersonFS.py:1351 PersonFS/PersonFS.py:1395
 msgid "Spouses"
-msgstr "SPOUSES"
+msgstr "Spouses"
 
 #: PersonFS/PersonFS.py:1369
 msgid "Eraro: neniuj datumoj."
@@ -537,7 +537,7 @@ msgstr "Compare independently of the number of days."
 
 #: PersonFS/komparo.py:78
 msgid "Person Filter"
-msgstr "Person filter"
+msgstr "Person Filter"
 
 #: PersonFS/komparo.py:85
 #, python-format
@@ -571,11 +571,11 @@ msgstr "Processing the list (2/2)"
 #: PersonFS/komparo.py:181 PersonFS/komparo.py:200
 #, python-format
 msgid "FS ID %s ne trovita"
-msgstr "Fs id %s not found"
+msgstr "FS ID %s not found"
 
 #: PersonFS/komparo.py:236 PersonFS/komparo.py:242
 msgid "male"
-msgstr "opposite"
+msgstr "male"
 
 #: PersonFS/komparo.py:238 PersonFS/komparo.py:244
 msgid "female"
@@ -712,7 +712,7 @@ msgstr "Regime:"
 
 #: PersonFS/PersonFS.glade:651
 msgid "Serĉi"
-msgstr "To look for"
+msgstr "Search"
 
 #: PersonFS/PersonFS.glade:670
 msgid "Ĉefa"
@@ -728,7 +728,7 @@ msgstr "Sources"
 
 #: PersonFS/PersonFS.glade:673
 msgid "Bildoj"
-msgstr "Bildoj"
+msgstr "Pictures"
 
 #: PersonFS/PersonFS.glade:697
 msgid "Vidi FS duplikatojn"
@@ -772,7 +772,7 @@ msgstr "Documents status"
 
 #: PersonFS/PersonFS.glade:871
 msgid "Statuso de duploj"
-msgstr "Duplica status"
+msgstr "Duplicate status"
 
 #: PersonFS/PersonFS.glade:890
 msgid "refreŝigi"
