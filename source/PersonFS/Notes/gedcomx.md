@@ -1,29 +1,29 @@
 # sources
-doc «officielle» : (mais pourtant pas à jour)
+"official" doc: (but not up to date)
 https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md
 https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md
 
-un peu plus pratique, mais incomplète (quand je l'ai consultée, il manquait par exemple les classes Event et Document, qui sont pourtant des «toplevel» :
+a little more practical, but incomplete (when I looked at it, for example, the Event and Document classes were missing, which are nevertheless "top level":
 https://www.familysearch.org/developers/docs/api/gx_json
 https://www.familysearch.org/developers/docs/api/fs_json
 
-sans surprise familysearch ne suit pas sa propre norme, il rajoute des classes et des champs, et en ignore certains…
+unsurprisingly familysearch does not follow its own standard, it adds classes and fields, and it ignores some of them…
 
-# traduire les types en type python :
+# convert the types to python type:
 boolean                 --> bool
 string                  --> str
 map of array of string  --> dict[str,set]   (identifiers)
 map of Link             --> dict[str,Link]  (links)
 array                   --> set
-classe                  --> classe
-array of classe         --> set[classe]
+class                   --> class
+array of class          --> set[class]
 
-# liste des classes gedcomx :
+# list of gedcomx classes:
 
-## classe racine du fichier gedcomx :
+## base class of the gedcomx file:
 * Gedcomx(HypermediaEnabledData)
 
-## classes «toplevel» :
+## "top level" classes:
 * Person(Subject)
 * Relationship(Subject)
 * SourceDescription(HypermediaEnabledData)
@@ -32,7 +32,7 @@ array of classe         --> set[classe]
 * PlaceDescription(Subject)
 * Document(Conclusion)
 
-## classes se résumant à une énumération de chaînes :
+## classes that are essentially string enumerations:
 ConfidenceLevel
 FactType
 GenderType
@@ -41,26 +41,26 @@ NameType
 RelationshipType
 ResourceType
 
-## classes qui n'héritent d'aucune autre :
-* ExtensibleData	met en place id
-* HasDateAndPlace (utilité ?)
-* HasFacts (utilité ?)
-* HasNotes (utilité ?)
-* HasText (utilité ?)
+## classes that do not inherit from another class:
+* ExtensibleData	implements id
+* HasDateAndPlace (used for ?)
+* HasFacts (used for ?)
+* HasNotes (used for ?)
+* HasText (used for ?)
 * Link
 * Qualifier
-* ReferencesSources (utilité ?)
-* ResourceReference   (mettre et gérer un index ?)
+* ReferencesSources (used for ?)
+* ResourceReference   (creates and manages an index ?)
 * TextValue
 * VocabElement
 * VocabElementList
 
-## classes héritant d'une autre et dérivées par d'autres :
+## classes inheriting from one other class and serving as the base for other classes:
 * HypermediaEnabledData(ExtensibleData)
 * Conclusion(HypermediaEnabledData)
 * Subject(Conclusion)
 
-##  autres classes
+## other classes
 * Address(ExtensibleData)
 * Attribution(ExtensibleData)
 * Coverage(HypermediaEnabledData)
@@ -80,6 +80,6 @@ ResourceType
 * SourceCitation(HypermediaEnabledData)
 * SourceReference(HypermediaEnabledData)
 
-##  ajouts FS :
+## FS additions:
 * PersonInfo
-* CitationField : pas documentée ???
+* CitationField: no documentation ???

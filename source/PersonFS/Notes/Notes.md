@@ -1,45 +1,45 @@
 
-Comment transférer au mieux les notes saisies dans gramps vers FS ?  
-Et inversement ?
+How to best transfer notes from Gramps to FS?
+And vice versa?
 
-# Dans gramps :
-* Une Note peut être référencée par :
-  * un individu
-  * une famille
-  * un évènement
-  * une référence d'évènement
-  * un nom
+# In Gramps:
+* A Note can be referenced by:
+  * a person
+  * a family
+  * an event
+  * an event reference
+  * a name
   * …
-* une même note peut être référencée à plusieurs endroits.
-* une note se compose de :
-  * un id
-  * un type
-  * un texte
-  * des étiquettes
+* the same note can be referenced in multiple places.
+* a note consists of:
+  * an id
+  * a type
+  * text
+  * tags
 
-# Dans FS :
-* Une Note peut être attachée à :
-  * un individu
-  * une famille
+# In FS:
+* A Note can be attached to:
+  * a person
+  * a family
   * …
-* on ne peut pas réutiliser une note.
-* une note se compose de :
-  * un id
-  * un titre
-  * un texte
-  * une «attribution» (= auteur et date de dernière modification)
-  * si c'est une note d'individu : un tag alerte (booléen) (une seule note d'individu peut être une note d'alerte)
-* les «Explications» (= changeMessage) peuvent être considérées comme des notes. Elles peuvent être rattachées à :
-  * un évènement/fait
-  * un conjoint
-  * un nom
+* a note cannot be reused.
+* a note consists of:
+  * an id
+  * a title
+  * text
+  * "attribution" (= author and last modified date)
+  *  if it's a person's note: an alert tag (boolean) (only one person note can be an alert note)
+* "Explanations" (= changeMessage) can be considered notes. They can be attached to:
+  * an event/fact
+  * a spouse
+  * a name
   * …
-* le «Bref récit biographique» pourrait être considéré comme une note, mais il est traité par FS comme un fait.
+* the "Brief biological narrative" could be considered a note, but FS treats it as a fact.
 
-# traitement
-* pour les notes individu et famille :
-  * type gramps <--> titre FS
-  * texte gramps <--> texte FS
-  * on suppose que le type/titre est unique pour un individu ou une famille (mais c'est faux aussi bien dans gramps que FS…)
-* pour les notes évènement/référence d'évènement, nom
-  * concaténation des (type+texte) gramps, triés par type <--> changeMessage FS.
+# transfer process
+* for person and family notes:
+  * Gramps type <--> FS title
+  * Gramps text <--> FS text
+  * assumption is made that type/title is unique per person or family (though this is often not true in either Gramps or FS…)
+* for event/event reference and name notes
+  * concatenate Gramps (type+texte), sorted by type <--> FS changeMessage.

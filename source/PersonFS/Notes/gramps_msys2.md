@@ -1,11 +1,11 @@
 
-d'abord suivre :  
+first follow:
 https://gramps-project.org/wiki/index.php/Gramps_for_Windows_with_MSYS2
-sauf : ne pas installer msys/gcc
+but: do not install msys/gcc
 
-note : l'installation de fontconfig échoue. Pas grave ?  
+note: fontconfig installation fails. No problem?
 
-ensuite :
+next:
 
 ```
 pacman -S mingw-w64-x86_64-python3-requests mingw-w64-x86_64-python3-pip mingw-w64-x86_64-python3-packaging unzip

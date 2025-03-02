@@ -1,49 +1,49 @@
 
-Comment comparer les memories FS avec les media gramps ?
+How to compare FS memories with Gramps media?
 
-note : l'interface service est plus pratique pour obtenir les informations :
+note: using the service interface is easier for getting information:
 https://www.familysearch.org/service/memories/presentation/artifacts/197051022?includeAssociatedArtifacts=true&includeDatesPlaces=true&includeContactName=true&_=1726156704965&profile=skeleton
 
 
-# propriétés des media gramps :
- * propriétés visibles :
-   * Identifiant(gramps\_id) , titre(desc) , date , chemin(path) , étiquettes , type(mime)
-   * attributs
+# Gramps media properties:
+ * visible properties:
+   * Identifier(gramps\_id), title(desc), date, path(path), tags, type(mime)
+   * attributes
    * citations
    * notes
- * propriétés cachées : checksum.
-on doit avoir aussi quelque part le «thumbnail», car je me suis retrouvé avec un aperçu correspondant à l'ancienne version du fichier.
+ * hidden properties: checksum.
+the "thumbnail" needs to be stored, otherwise previews might display an outdated version.
 
-# propriétés des références de media gramps :
- * propriétés visibles :
+# Gramps media reference properties:
+ * visible properties:
    * media
-   * référence : type, handle
-   * privé?
+   * reference: type, handle
+   * private?
    * rectangle
-   * attributs
+   * attributes
    * citations
    * notes
- * propriétés cachées : aucune.
+ * hidden properties: none.
 
-# propriétés des memories FS :
- * classe Evidence
+# FS memory properties:
+ * Evidence class
    * id
-   * resourceId : la partie avant '-' donne l'id de la SourceDescription.
+   * resourceId: the part before '-' represents the SourceDescription ID.
    * resource
    * links
- * classe SourceDescription
+ * SourceDescription class
    * id
-   * about : lien vers l'image
+   * about: link to the image
    * descriptions (set)
    * artifactMetadata (set)
-   * links : liens vers :
+   * links: links to:
      * artifact, comments, coverage, image, image-deep-zoom-lite, image-icon, image-thumbnail, memory, persons, …
-   * mediaType (ex. : 'image/jpeg')
-   * titles : titre(s)
-   * coverage : set of Coverage :
-     * spatial : PlaceReference = lieu
-     * temporal : Date
+   * mediaType (e.g.: 'image/jpeg')
+   * titles: title(s)
+   * coverage: set of Coverage:
+     * spatial: PlaceReference = place
+     * temporal: Date
    * …
- * classe artifactMetaData
+ * artifactMetaData class
    * filename, width, height, size
 

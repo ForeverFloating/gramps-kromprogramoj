@@ -1,22 +1,21 @@
 #
 # Gramplet - PlaceFrCog (Place : France : Code Officiel Géographique)
 #
-# Kopirajto © 2022 Jean Michault
-# Licenco «GPL-3.0-or-later»
+# Copyright (C) 2022 Jean Michault
+# GNU General Public License v3.0 or later
 #
-# Ĉi tiu programo estas libera programaro; vi povas redistribui ĝin kaj/aŭ modifi
-# ĝi laŭ la kondiĉoj de la Ĝenerala Publika Permesilo de GNU kiel eldonita de
-# la Free Software Foundation; ĉu versio 3 de la Licenco, aŭ
-# (laŭ via elekto) ajna posta versio.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
-# Ĉi tiu programo estas distribuata kun la espero, ke ĝi estos utila,
-# sed SEN AJN GARANTIO; sen eĉ la implicita garantio de
-# KOMERCEBLECO aŭ TAĜECO POR APARTA CELO. Vidu la
-# GNU Ĝenerala Publika Permesilo por pliaj detaloj.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
 #
-# Vi devus esti ricevinta kopion de la Ĝenerala Publika Permesilo de GNU
-# kune kun ĉi tiu programo; se ne, skribu al 
-# Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
 #
 
 #------------------------------------------------------------------------

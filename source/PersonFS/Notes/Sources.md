@@ -1,78 +1,77 @@
 
-# sources intéressantes
-* code officiel java : https://github.com/FamilySearch/gedcomx-java
-* code officiel php : https://github.com/FamilySearch/gedcomx-php
+# useful resources
+* official Java code: https://github.com/FamilySearch/gedcomx-java
+* official PHP code: https://github.com/FamilySearch/gedcomx-php
 * https://github.com/dekoza/pyGedcomX
-  * peu avancé : pas d\'import, pas d\'export
-* spécifications gedcom 7 : https://gedcom.io/specifications/FamilySearchGEDCOMv7.html
-  * le plus utile, notamment : https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#records
+  * under development: import and export functionality not yet implemented
+* GEDCOM 7 specifications: https://gedcom.io/specifications/FamilySearchGEDCOMv7.html
+  * particularly useful section: https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#records
 
-# Exemple 1 : acte saisi dans FS : AD42 2NUM9_117_2 vue 6/78, double mariage
-## Dans gramps :
-* dépôt R0007 =
-  propriétés :
-  * nom = «France, Loire : archives départementales.»
+# Example 1: FS record: AD42 2NUM9_117_2 view 6/78, double marriage
+## In Gramps:
+* repository R0007 =
+  Properties:
+  * name = "France, Loire: departmental archives."
   * type = archives
-  * adresses : 
-  * urls : site=«https://…»
-  * notes :
-* source S07216 
-  proriétés :
-  * titre : «Juré.- Baptêmes, mariages, sépultures - 1720 - 1745»
-  * auteur :
-  * pub. info. :
-  * abbréviation : AD42, 2NUM9_117_2
-  * notes : 
-  * galerie :
-  * attributs :
-  * dépôts : R0007
-  * !!! pas d'url ??? (==> à mettre en note ou en attribut )
+  * addresses:
+  * URLs: site="https://…"
+  * notes:
+* source S07216
+  properties:
+  * title: "Juré.- Baptisms, marriages, burials - 1720 - 1745"
+  * author:
+  * pub. info.:
+  * abbreviation : AD42, 2NUM9_117_2
+  * notes:
+  * gallery:
+  * attributes:
+  * repositories: R0007
+  * !!! missing URL ??? (==> add to notes or attributes)
 * citation C15667
-  propriétés :
+  properties:
   * source=S07216
   * date=1721-11-21
-  * volume/page=vue 6/78
-  * niveau de confiance=«très haut»
-  * notes :
-    * citation=«note : deux mariages en …»
-    * transcription=«…»
-  * galerie :
-  * attributs :
-  * !!! pas d'url ??? (==> à mettre en note ou en attribut )
-     en note : le lien est cliquable, mais pas géré par l'export gedcomforgeneanet.
-     en attribut : le lien n'est pas cliquable, mais géré par l'export.
-* attachements
-  --> la citation peut être liée aux 2 mariages, aux 2 familles, aux 4 époux, aux 4 liens parent-enfants, aux évènements naissance des époux…
-  propriétés de l'attachement : aucune ?
-## dans FS :
+  * volume/page=view 6/78
+  * confidence level="very high"
+  * notes:
+    * citation="note: two marriages in…"
+    * transcription="…"
+  * gallery:
+  * attributes:
+  * !!! missing URL??? (==> add to notes or attributes)
+     in note: the link is clickable but not processed by the GEDCOM for Geneanet export.
+     in attribute: the link is not clickable but is processed by the GEDCOM for Geneanet export.
+* attachments
+  --> the citation can be linked to the 2 marriages, the 2 famililes, the 4 spouses, the 4 parent-child relationships, and the spouses' birth events…
+  attachment properties: none?
+## in FS:
 * source = https://www.familysearch.org/tree/sources/viewedit/Q318-NX7
-  propriétés :
+  properties:
   * date=1721-11-21
-  * titre=«Claude Dumas x Marie Barjat et Jean Dumas x Bénigne Meunier. France, Loire, Juré.»
-  * url=«https://archives.loire.fr/ark:/51302/vta54d46fa1795267c1/daogrp/0/6»
-  * référence=«France, Loire : archives départementales.\ncote : 2NUM9_117_2 - Juré.- Baptêmes, mariages, sépultures - 1720 - 1745\nvue 6/78.»
-  * note=«note : deux mariages en …»
-  * date de modification
-  * raison de la modification
-* attachements : les deux liens conjuguaux, les 4 époux.
-  propriétés :
-  * signets
-  * raison de l'ajout.
-## correspondances
-* gr-dépôt + gr-source + gr-citation.volume-page ~= fs-source.référence
+  * title="Claude Dumas x Marie Barjat and Jean Dumas x Bénigne Meunier. France, Loire, Juré."
+  * url="https://archives.loire.fr/ark:/51302/vta54d46fa1795267c1/daogrp/0/6"
+  * reference="France, Loire: departmental archives.\nreference: 2NUM9_117_2 - Juré.- Baptisms, marriages, burials - 1720 - 1745\nview 6/78."
+  * note="note: two marriages in…"
+  * last modified date
+  * reason for modification
+* attachments : the two marriage links, the 4 spouses.
+  properties:
+  * bookmarks
+  * reason for addition.
+## correspondences
+* gr-repository + gr-source + gr-citation.volume-page ~= fs-source.reference
 * gr-citation.date = fs-source.date
-* attachement gramps ~= attachement FS
+* gramps attachment ~= FS attachment
 
 
-# Exemple 2 : acte trouvé dans FS.
+# Example 2: record found in FS.
 * source = https://www.familysearch.org/platform/sources/descriptions/S1JY-V39
-  propriétés :
-  * id = descriptionId = S1JY-V39 
-    * = identifiant de la référence de citation, unique sur le site.
+  properties:
+  * id = descriptionId = S1JY-V39
+    * = unique citation reference ID on the site
   * about = "https://familysearch.org/ark:/61903/1:1:CP7Q-8PN2"
-    * = url de la citation
-  * title = Paul Gabriel Libaros, décès. "France, Index des décès enregistrés par l'Insee, 1970-2022"
-    * = titre de la référence de citation, modifiable.
-  * citation.value = "France, Index des décès enregistrés par l'Insee, 1970-2022", , &amp;lt;i&amp;gt;FamilySearch&amp;lt;/i&amp;gt; (https://familysearch.org/ark:/61903/1:1:CP7Q-8PN2 : 13 November 2022), Paul Gabriel Libaros, 1982.
-    * titre de la citation, généré par FS, non modifiable.
-
+    * = citation URL
+  * title = Paul Gabriel Libaros, death. "France, Index of deaths registered by INSEE, 1970-2022"
+    * = editable citation reference title.
+  * citation.value = "France, Index of deaths registered by INSEE, 1970-2022", , &amp;lt;i&amp;gt;FamilySearch&amp;lt;/i&amp;gt; (https://familysearch.org/ark:/61903/1:1:CP7Q-8PN2 : 13 November 2022), Paul Gabriel Libaros, 1982.
+    * citation title generated by FS, not editable

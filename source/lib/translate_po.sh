@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-#################################################################
-# skripto por aŭtomate traduki frazojn sen traduko en po-dosieron
-#################################################################
+#######################################################################
+# script to automatically translate untranslated sentences in a po file
+#######################################################################
 BASEDIR=$(dirname $(readlink -f $0))
 
 src=eo
@@ -38,7 +38,7 @@ awk -v "BASEDIR=$BASEDIR" -v "src=$src" -v "dst=$dst" '{
       {
         print ("msgid " MSGID);
         printf("msgstr \"");
-        MSG=system(BASEDIR"/traduko.sh " src " " dst " " MSGID)
+        MSG=system(BASEDIR"/translation.sh " src " " dst " " MSGID)
         printf("\"\n\n");
       }
       else

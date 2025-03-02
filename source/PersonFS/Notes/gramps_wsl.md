@@ -1,33 +1,33 @@
-# utiliser gramps sous windows avec WSL
+# Using Gramps on Windows with WSL
 
-pré-requis : windows 10 >= 22H2, ou windows 11
+prerequisites: Windows 10 >= 22H2, or Windows 11
 
 
-## installer wsl
-aller dans «Paramètres»
-* --> Applications
-* --> Fonctionnalités Facultatives
-* --> Plus de fonctionnalités windows
-* --> cocher «Sous-système windows pour Linux» et «Plateforme de machine virtuelle»
-* --> OK, rebooter
+## Install WSL
+Go to "Settings"
+* --> System
+* --> Optional Features
+* --> More Windows features
+* --> Check "Windows Subsystem for Linux" and "Virtual Machine Platform"
+* --> OK, reboot
 
-## mettre à jour WSL vers la dernière version :
-* lancer «microsoft store»
-* chercher wsl, cliquer obtenir
+## update WSL to the latest version:
+* Launch "Microsoft"
+* Search for WSL, click get
 
-## installer ubuntu
-toujours dans «microsoft store» :
-* chercher ubuntu 22.04, cliquer obtenir puis ouvrir
-* rentrer un nom d’utilisateur, le mot de passe.
-* installer le support du français :
+## install Ubuntu
+still in "Microsoft Store":
+* search for Ubuntu 22.04, click get then open
+* enter a username and password.
+* install French language support:
 ```
 sudo apt-get -y install language-pack-fr language-pack-fr-base language-pack-gnome-fr language-pack-gnome-fr-base
 sudo locale-gen
 sudo update-locale LANG=fr_FR.UTF-8
 ```
 
-## installer gramps
-dans la ligne de commande ubuntu :
+## install Gramps
+in the Ubuntu command line:
 ```
 sudo add-apt-repository universe
 sudo apt install gramps python3-pip -y
@@ -35,5 +35,4 @@ gsettings set org.gnome.desktop.interface cursor-theme whiteglass
 gramps
 ```
 
-## facultatif : installer le driver vGPU
-
+## optional: install the vGPU driver

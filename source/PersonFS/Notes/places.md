@@ -1,148 +1,147 @@
-	; fsid avec lieu non standardisé : LR24-CQK
+	; FSID with non-standardized place: LR24-CQK
 
-# les lieux dans familysearch :
+# places in FamilySearch:
 
-recherche : <https://www.familysearch.org/research/places/>
+search: <https://www.familysearch.org/research/places/>
 
-peuvent être de deux classes :
-* PlaceDescription : attribut «places» de la classe gedcomx.
-	décrit les lieux normalisés.
-  * l'id permet de récupérer la description complète sur <https://api.familysearch.org/platform/places/description/ID>
-    * de là, on peut récupérer le lien vers la place familysearch : <https://api.familysearch.org/platform/places/ID2>
-  * names : noms localisés.
-* PlaceReference : partout ailleurs. Par exemple attribut place de la classe Fact.
-	attributs importants :
-  * description : contient l'id du lieu normalisé sous la forme #ID (si le lieu est normalisé)
-  * original : le texte saisi
-  * normalized : le nom normalisé (attention à la langue), pour la France il est généralement (mais pas toujours) de la forme «commune, département, région, pays»
-  * names : noms localisés.
+can be classified in two ways:
+* PlaceDescription : the "places" attribute of the gedcomx class.
+	describes standardized places.
+  * the ID retrieves the full description from <https://api.familysearch.org/platform/places/description/ID>
+    * from there, the FamilySearch place link can be retrieved: <https://api.familysearch.org/platform/places/ID2>
+  * names: localized names.
+* PlaceReference: used in all other cases. For example, the place attribute of the Fact class.
+	important attributes:
+  * description: contains the standardized place ID in the format #ID (if the place is standardized)
+  * original: the text as entered
+  * normalized: the standardized name (note the language), for France it is usually (but not always) in the format "commune, department, region, country"
+  * names: localized names.
 
-Les lieux normalisés n'ont en général qu'une précision limitée à la commune. Pour rentrer un lieu plus précis, on faut utiliser le champ «original». Par exemple, si on utilise la forme recommandée par geneanet pour les lieux français, on va mettre dans original : «[lieu-dit ou précision] - commune, code_insee, département, région, pays».
- À vérifier : On va mettre dans description «#ID».
- On peut aussi créer un lieu depuis <https://www.familysearch.org/research/places/>
- On ne peut créer que les types suivants :
- * 115 : Établissement scolaire 
- *  20 : Cimetière
- * 308 : Quartier
- *  38 : Ferme
- *  23 : Lieu de culte ( à l'exception des temples de l’Église de Jésus-Christ !!! )
- * 391 : Village = plus petit que 376, dispose d'un magasin.
- * 376 : Town = A local division of human settlement often incorporated administratively, larger than a village but smaller than a city. An official designation for township in several of the United States including New England and parts of the midwest.
- * 201 : Commune
- * 186 : Ville = Installation artificielle plus ou moins étendue et pérenne dotée de systèmes élaborés d’exploitation des sols, d’habitations, de transport et d’organisation gouvernementale.
- * 266 : Hameau
- * 378 : Canton (Township)
- * 142 : Hôpital
-Les types suivants ne peuvent être créés que par FamilySearch :
- * Comté
- * Pays
+Standardized places usually only have commune-level precision. To specify a more precise location, use the "original" field. For example, using the Geneanet recommendation for French locations, enter in the "original" field: "[place-name or precision] - commune, code_insee, departement, region, country."
+ Verification: Enter "#ID" in the description field.
+ A place from <https://www.familysearch.org/research/places/> can also be created
+ Only the following types can be created:
+ * 115: School
+ *  20: Cemetery
+ * 308: Neighborhood
+ *  38: Farm
+ *  23: Place of worship (excluding temples of The Church of Jesus Christ of Latter-Day Saints!!!)
+ * 391: Village = smaller than type 376, has a shop.
+ * 376: Town = A local division of human settlement often incorporated administratively, larger than a village but smaller than a city. An official designation for township in several of the United States including New England and parts of the midwest.
+ * 201: Commune
+ * 186: City = A more or less extensive and permanent artificial settlement with developed systems for land use, housing, transportation, and government.
+ * 266: Hamlet
+ * 378: Canton (Township)
+ * 142: Hospital
+The following types can only be created by FamilySearch:
+ * County
+ * Country
  * Province
- * Région
- * État
+ * Region
+ * State
 
-liste des types de lieux : <https://www.familysearch.org/platform/places/types> .
-Certaines descriptions ne sont pas traduites en français. voir <https://www.familysearch.org/platform/places/types?lang=en> pour la description en américain.  
-Quelques-uns des types pertinents en France :
- * type 580 = Pays
- * type 337 = Région
- * type 209 = Comté (avant la révolution)
- * type 215 = Département
+list of place types: <https://www.familysearch.org/platform/places/types>.
+Some descriptions are not translated into French. See <https://www.familysearch.org/platform/places/types?lang=en> for English descriptions.
+Some relevant place types in France:
+ * type 580 = Country
+ * type 337 = Region
+ * type 209 = County (pre-Revolution)
+ * type 215 = Department
 
  * type 172 = Canton
  * type 201 = Commune
- * type 186 = Ville
- * type 171 = Arrondissement municipal
- * type 140 = Endroits peuplés
- * 115 : Établissement scolaire 
- *  20 : Cimetière
- * 308 : Quartier
- *  38 : Ferme
- *  23 : Lieu de culte ( à l'exception des temples de l’Église de Jésus-Christ !!! )
- * 391 : Village = plus petit que 376, dispose d'un magasin.
- * 266 : Hameau
- * 142 : Hôpital
+ * type 186 = City
+ * type 171 = Municipal Arrondissement
+ * type 140 = Populated Places
+ * 115: School
+ *  20: Cemetery
+ * 308: Neighborhood
+ *  38: Farm
+ *  23: Place of worship (excluding temples of The Church of Jesus Christ of Latter-Day Saints!!!)
+ * 391: Village = smaller than type 376, has a shop.
+ * 266: Hamlet
+ * 142: Hospital
 
 
-Attention : il y a deux types d'ID :
- * l' ID place-description = celui utilisé pour  https://api.familysearch.org/platform/places/description/ID. C'est celui utilisé dans les classes «Gedcomx» et «Fact». Il correspond à la classe gedcomx.PlaceDescription.
- * l' ID place = celui utilisé pour https://api.familysearch.org/platform/places/ID
-   * plusieurs ID place-description peuvent pointer vers le même ID place.
-   * sur <https://api.familysearch.org/platform/places/ID>, on récupère la liste des «place-description», qui peuvent notamment être des variantes temporelles.
-   * je n'ai pas trouvé de correspondance dans les classes gedcomx.
+Important: there are two types of IDs:
+ * place-description ID = used for  https://api.familysearch.org/platform/places/description/ID. Used in the "Gedcomx" and "Fact" classes. Corresponds to the gedcomx.PlaceDescription class.
+ * place ID = used for https://api.familysearch.org/platform/places/ID
+   * multiple place-description IDs can point to the same place ID.
+   * <https://api.familysearch.org/platform/places/ID> retrieves a list of "place-descriptions", which may include temporla variations.
+   * no corresponding gedcomx class found.
 
 
-Un lieu peut avoir des doublons. Exemple pour Angoulême, on a :
- * ID = 10978745 (Commune, certifié); type=201 ; fullname = «Angoulême, Charente, Nouvelle-Aquitaine, France»
- * ID = 5953317 (Commune, accepté) ; type=201 ; fullname = «Angoulême, Charente, Nouvelle-Aquitaine, France»
-   a des enfants de type canton ??? : 
-   * 9517845 ; type = 172 ; fullname = «Aubeterre-sur-Dronne, Angoulême, Charente, Nouvelle-Aquitaine, France»
-   * 9517842 ; type = 172 ; fullname = «Blanzac-Porcheresse, Angoulême, Charente, Nouvelle-Aquitaine, France»
- * ID = 10905243 (Commune, accepté) ; type=201 ; fullname = «Angoulême, Charente, Poitou-Charentes, France»
- * ID = 6824318 (Endroits peuplés, accepté)
- * ID = 10743639 (Ville, certifié) ; type=186
-   * partie de 10709047 ; type=209 ; name = «Angoumois»
+A place can have duplicates. Example for Angoulême:
+ * ID = 10978745 (Commune, certified); type=201; fullname = "Angoulême, Charente, Nouvelle-Aquitaine, France"
+ * ID = 5953317 (Commune, acepted); type=201; fullname = "Angoulême, Charente, Nouvelle-Aquitaine, France"
+   Has canton-type children???:
+   * 9517845; type = 172; fullname = "Aubeterre-sur-Dronne, Angoulême, Charente, Nouvelle-Aquitaine, France"
+   * 9517842; type = 172; fullname = "Blanzac-Porcheresse, Angoulême, Charente, Nouvelle-Aquitaine, France"
+ * ID = 10905243 (Commune, accepted); type=201 ; fullname = "Angoulême, Charente, Poitou-Charentes, France"
+ * ID = 6824318 (Populated places, accepted)
+ * ID = 10743639 (City, certified) ; type=186
+   * part of 10709047; type=209; name = "Angoumois"
 
-Question : à quoi ressemblent les lieux non normalisés ?
+Question: what do non-standardized places look like?
+
+# correspondance with Gramps
+## Problem 1: sorting the Gramps ID <--> FamilySearch ID.
+ * chosen solution = use Internet links: create a link, type="FamilySearch", addr = https://api.familysearch.org/platform/places/description/ID. A place can have multiple links.
+
+## Problem 2: places where the "original" property is more precise than "normalized"
+Creating a child place of the normalized place would be necessary, but only when "original" provides more detail than "normalized."
+To be addressed later. For now, the normalized place will be used.
 
 
-# correspondance avec gramps
-## Problème 1 : il faut stocker quelque part la correspondance ID gramps <--> ID familysearch.
- * solution choisie = utiliser les liens internet : créer un lien, type="FamilySearch", addr = https://api.familysearch.org/platform/places/description/ID . Un lieu peut avoir plusieurs liens.
+## equivalence of FamilySearch and Gramps types
+| code        | Name         | FS code          | notes |
+| ----------- | ------------ | ---------------- | ----- |
+|COUNTRY      | Country      | 580              | sovereign state
+|STATE        | State        | 362              | federal state
+|COUNTY       | County       | 209,521          | 209 = ruled by a county, 521 = English, Swedish, Romanian county
+|CITY         | City         | 186              |
+|PARISH       | Parish       | 312              |
+|LOCALITY     | Locality     |                  |
+|STREET       | Street       |                  |
+|PROVINCE     | Province     | 323              |
+|REGION       | Region       | 337              |
+|DEPARTMENT   | Departement  | 215              |
+|NEIGHBORHOOD | Neighborhood | 308              |
+|DISTRICT     | District     | 221              | American district, Arrondissement départemental
+|BOROUGH      | Borough      | 171              | Municipal arrondissement
+|MUNICIPALITY | Municipality | 201              | = French commune
+|TOWN         | Town         | 376              |
+|VILLAGE      | Village      | 391              |
+|HAMLET       | Hamlet       | 266              |
+|FARM         | Farm         | 38               |
+|BUILDING     | Building     | 23, 61, 115, 142 |
+|NUMBER       | Number       |                  |
 
-## Problème 2 : lieux avec une propriété «original» plus précise que «normalized»
-Il faudrait créer un lieu enfant du lieu normalisé, mais seulement quand «original» est vraiment plus précis que «normalized».  
-À voir plus tard. Pour l'instant on en reste au lieu normalisé.
-
-
-## équivalence entre les types familysearch et gramps
-| code        | nom français     | code FS | obs. |
-| ----------- | ---------------- | --------| ---- |
-|COUNTRY      | Pays             | 580     | État souverain
-|STATE        | Province (Région)| 362     | État fédéral
-|COUNTY       | Comté (Départ.)  | 209,521 | 209 = dirigé par un comte, 521=comté anglais,suédois, roumain
-|CITY         | Ville            | 186     |
-|PARISH       | Paroisse         | 312     |
-|LOCALITY     | Lieu-dit         |         |
-|STREET       | Rue              |         |
-|PROVINCE     | Province         | 323     |
-|REGION       | Région           | 337     |
-|DEPARTMENT   | Département      | 215     |
-|NEIGHBORHOOD | Quartier         | 308     | 
-|DISTRICT     | District (Arr.)  | 221     | District américain, Arrondissement départemental
-|BOROUGH      | Borough (Arr.)   | 171     | Arrondissement municipal
-|MUNICIPALITY | Municipalité     | 201     | = Commune en france
-|TOWN         | Bourg            | 376     |
-|VILLAGE      | Village          | 391     |
-|HAMLET       | Hameau           | 266     |
-|FARM         | Ferme            | 38      |
-|BUILDING     | Immeuble         |         | 23, 61, 115, 142
-|NUMBER       | Numéro           |         |
-
-types FS usuels sans correspondance claire :  
+Usual FS types without clear equivalents:
  * 172 = Canton
- * 140 = Endroits peuplés
- *  20 : Cimetière
+ * 140 = Populated places
+ *  20 : Cemetery
 
 
 
-# correspondance avec les codes insee
-api adresse : https://adresse.data.gouv.fr/api-doc/adresse
-api cog : https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/
-  note : les anciennes communes n'y sont pas.
-fichiers cog : https://www.insee.fr/fr/information/2560452
+# correspondance with INSEE codes
+API address: https://adresse.data.gouv.fr/api-doc/adresse
+API COG: https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/
+  note: former communes are not included.
+COG files: https://www.insee.fr/fr/information/2560452
 
-types de divisions :  
-* pays = COUNTRY = 580
-* région = REGION = 337
-* département = DEPARTMENT = 215
-	, partie d'une région
-* collectivité territoriale
-	, partie d'une région
-    ex. : conseils départementaux 
+Administrative divisions:
+* country = COUNTRY = 580
+* region = REGION = 337
+* department = DEPARTMENT = 215
+	, part of a region
+* territorial collectivity
+	, part of a region
+    e.g.: departmental councils
 * arrondissement ~ DISTRICT ~ 221
-	, partie d'un département
-* canton, partie d'un département
+	, part of a department
+* canton, part of a department
 * commune = MUNICIPALITY = 201
 
-# correspondance avec geonames
+# correspondence with GeoNames
 
